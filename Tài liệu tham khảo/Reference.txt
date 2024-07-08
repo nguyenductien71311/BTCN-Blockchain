@@ -1,2 +1,3 @@
-Giao diện: https://etherscan.io
-           https://www.myetherwallet.com/wallet/create
+Giao diện: https://www.myetherwallet.com/wallet/create
+
+Create Blockchain: https://www.devlane.com/blog/implementing-a-blockchain-with-javascript
