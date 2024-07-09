@@ -78,7 +78,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed z-10 w-full h-[60px] bg-white flex items-center justify-around p-4">
+    <div className="bg-black fixed z-10 w-full h-[60px] flex items-center justify-between p-4">
       <Link to="/dashboard">
         <div className="w-[120px]">
           <img className="w-[100%]" src="../assets/logo-mew.png" alt="logo" />
@@ -137,7 +137,7 @@ const Navbar = () => {
         </Dialog>
         <Popover>
           <PopoverTrigger asChild>
-            <div className="hover:cursor-pointer">
+            <div className="hover:cursor-pointer text-white">
               <FaUserCircle size={30} />
             </div>
           </PopoverTrigger>

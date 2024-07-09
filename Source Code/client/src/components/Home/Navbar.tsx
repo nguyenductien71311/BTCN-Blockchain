@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="bg-white mx-auto max-w-screen-xl p-6">
+    <div className="bg-black p-6">
       <div className="flex items-center justify-between">
         <Link to="/">
           <div className="w-[120px]">

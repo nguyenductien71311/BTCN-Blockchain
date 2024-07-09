@@ -8,7 +8,7 @@ export default function DashboardLayout() {
   return (
     <WalletProvider>
       <BlockChainProvider>
-        <div className="min-h-screen bg-primary-gray">
+        <div className="min-h-screen bg-slate-950">
           <Navbar />
           <div className="flex">
             <Slidebar />

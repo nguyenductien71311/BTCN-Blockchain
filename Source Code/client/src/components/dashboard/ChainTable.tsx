@@ -71,12 +71,12 @@ const ChainTable = () => {
   }, [MyCoin?.chain, activePage]);
 
   return (
-    <div className="w-[300px] sm:w-[500px] lg:w-full bg-white p-4 flex flex-col gap-5 rounded-md">
+    <div className="w-[300px] sm:w-[500px] lg:w-full bg-slate-950 p-4 flex flex-col gap-5 rounded-md">
       <div className="mx-auto my-5 flex flex-wrap items-center gap-5">
         <h1 className="text-3xl font-bold text-primary-green">Chains</h1>
         <div></div>
       </div>
-      <Table>
+      <Table className="text-white">
         <TableHeader>
           <TableRow>
             <TableHead className="w-[300px]">Hash</TableHead>
@@ -104,13 +104,13 @@ const ChainTable = () => {
                       </p>
                     </TableCell>
                   </DialogTrigger>
-                  <DialogContent className="max-w-[90%] lg:max-w-[60%]">
+                  <DialogContent className="max-w-[90%] lg:max-w-[60%] bg-slate-950">
                     <DialogHeader>
                       <DialogTitle>
                         <p className="text-primary-green">Block detail</p>
                       </DialogTitle>
                     </DialogHeader>
-                    <div className="flex flex-col gap-5">
+                    <div className="flex flex-col gap-5 text-white">
                       <div className="w-[100%] p-2 rounded-md border border-gray-300 flex flex-col gap-3">
                         <h1 className="text-xl font-bold">Hash</h1>
                         <p className="max-w-[300px] md:max-w-full truncate">

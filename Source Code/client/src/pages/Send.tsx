@@ -107,7 +107,7 @@ const Send = () => {
   };
 
   return (
-    <div className="mt-[60px] p-6 flex flex-col gap-10">
+    <div className="mt-[60px] p-6 flex flex-col gap-10 bg-slate-950">
       <img
         className="w-[100%] h-[150px] md:h-[300px] object-cover rounded-md"
         src="/assets/banner-create.jpg"
@@ -115,21 +115,21 @@ const Send = () => {
       />
       {startMining ? (
         <form
-          className="bg-white p-6 rounded-md flex flex-col gap-5"
+          className="bg-slate-950 p-6 rounded-md flex flex-col gap-5"
           onSubmit={(e) => {
             handleStartMining(e);
           }}
         >
           <div className="flex flex-col gap-3">
-            <h1 className="text-3xl font-bold text-primary-green">
+            <h1 className="text-3xl font-bold text-primary-green ">
               Confirm transactions
             </h1>
-            <p>
+            <p className="text-white">
               These transactions are waiting to be included in the next block.
               Next block is created when you confirm the process.
             </p>
           </div>
-          <Table>
+          <Table className="text-white">
             <TableHeader>
               <TableRow>
                 <TableHead className="w-[300px]">From address</TableHead>
@@ -168,7 +168,7 @@ const Send = () => {
         </form>
       ) : (
         <form
-          className="bg-white p-6 rounded-md flex flex-col gap-5"
+          className="bg-slate-950 p-6 rounded-md flex flex-col gap-5"
           onSubmit={(e) => {
             handleCreateTransaction(e);
           }}
@@ -179,11 +179,11 @@ const Send = () => {
             </h1>
           </div>
           <div className="flex flex-col gap-5">
-            <h1 className="text-xl font-bold">Your address</h1>
+            <h1 className="text-xl font-bold text-white">Your address</h1>
             <Input defaultValue={userWallet?.address} disabled />
           </div>
           <div className="flex flex-col gap-5">
-            <h1 className="text-xl font-bold">To address</h1>
+            <h1 className="text-xl font-bold text-white">To address</h1>
             <Input
               value={transactionForm?.toAddress}
               onChange={(e) => {
@@ -195,7 +195,7 @@ const Send = () => {
             />
           </div>
           <div className="flex flex-col gap-5">
-            <h1 className="text-xl font-bold">Amount</h1>
+            <h1 className="text-xl font-bold text-white">Amount</h1>
             <Input
               value={transactionForm?.amount}
               onChange={(e) => {

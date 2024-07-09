@@ -37,7 +37,7 @@ const Slidebar = () => {
   const pathName = useLocation()?.pathname;
 
   return (
-    <div className="mt-[60px] h-[calc(100vh-60px)] bg-white px-2 py-6 w-[80px] md:w-[250px] fixed">
+    <div className="mt-[60px] h-[calc(100vh-60px)] bg-black px-2 py-6 w-[80px] md:w-[250px] fixed">
       {contents?.map((content) => {
         return (
           <TooltipProvider key={content?.id}>
@@ -45,7 +45,7 @@ const Slidebar = () => {
               <TooltipTrigger asChild>
                 <Link to={content?.url}>
                   <div
-                    className={`flex items-center justify-center md:justify-start p-4 rounded-md hover:bg-sky-500 hover:text-white ${
+                    className={`text-white flex items-center justify-center md:justify-start p-4 rounded-md hover:bg-sky-500 hover:text-white ${
                       pathName === content?.url && "bg-sky-500 text-white"
                     }`}
                   >

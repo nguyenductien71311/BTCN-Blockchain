@@ -130,19 +130,19 @@ const AccessWallet = () => {
   }, []);
 
   return (
-    <div className="bg-primary-gray px-6 py-[100px]">
+    <div className="bg-slate-950 px-6 py-[110px]">
       <div className="bg-white mx-auto md:w-[600px] lg:w-[800px] rounded-md">
         <div className="bg-primary-black text-white p-6 rounded-t-md">
           <h1 className="text-xl font-bold text-center">Access Your Wallet</h1>
         </div>
-        <div className="px-4 py-6">
+        <div className="px-4 py-6 bg-gray-700">
           <div className="px-4 mb-5 flex flex-wrap gap-3 justify-between">
             <div
               className="w-[100%] md:w-[30%] p-4 rounded-md flex flex-col gap-5 items-center  "
             >
               <img src="../assets/logo-create.svg" alt="article" />
-              <h1 className="text-xl font-bold">Hardware</h1>
-              <p className="text-center">
+              <h1 className="text-xl font-bold text-primary-green">Hardware</h1>
+              <p className="text-center text-amber-50">
                 Ledger wallet, FINNEY, Trezor, BitBox, Secalot, KeepKey, XWallet
               </p>
             </div>
@@ -150,29 +150,29 @@ const AccessWallet = () => {
               className="w-[100%] md:w-[30%] p-4 rounded-md flex flex-col gap-5 items-center"
             >
               <img src="../assets/logo-create.svg" alt="article" />
-              <h1 className="text-xl font-bold">MEW CX</h1>
-              <p className="text-center">MetaMask, Dappler</p>
+              <h1 className="text-xl font-bold text-primary-green">MEW CX</h1>
+              <p className="text-center text-amber-50">MetaMask, Dappler</p>
             </div>
             <Dialog open={openAccessType} onOpenChange={setOpenAccessType}>
               <DialogTrigger asChild>
                 <div
                   className="group w-[100%] md:w-[30%] p-4 rounded-md flex flex-col gap-5 items-center
-                          hover:scale-110 hover:cursor-pointer hover:bg-primary-green hover:text-white"
+                          hover:scale-110 hover:cursor-pointer hover:bg-primary-green hover:text-amber-50"
                 >
                   <img src="../assets/logo-create.svg" alt="article" />
-                  <h1 className="text-xl font-bold">Software</h1>
-                  <p className="text-center">
+                  <h1 className="text-xl font-bold text-primary-green group-hover:text-amber-50">Software</h1>
+                  <p className="text-center text-amber-50">
                     Keystore file, Private key, Minemonic phrase
                   </p>
                 </div>
               </DialogTrigger>
-              <DialogContent>
+              <DialogContent className="bg-slate-950">
                 <DialogHeader>
-                  <DialogTitle>Access To Wallet</DialogTitle>
+                  <DialogTitle className="text-primary-green">Access To Wallet</DialogTitle>
                 </DialogHeader>
                 <div className="flex flex-col gap-5">
                   <div
-                    className={`flex items-center justify-between gap-3 p-4 rounded-md border-2
+                    className={`flex items-center justify-between gap-3 p-4 rounded-md border-2 text-primary-green
                                 hover:cursor-pointer hover:border-primary-green ${
                                   accessType === "keystore"
                                     ? "border-primary-green"
@@ -193,7 +193,7 @@ const AccessWallet = () => {
                     )}
                   </div>
                   <div
-                    className={`flex items-center justify-between gap-3 p-4 rounded-md border-2
+                    className={`flex items-center justify-between gap-3 p-4 rounded-md border-2 text-primary-green
                                 hover:cursor-pointer hover:border-primary-green ${
                                   accessType === "privatekey"
                                     ? "border-primary-green"
@@ -215,7 +215,7 @@ const AccessWallet = () => {
                   </div>
                 </div>
                 <DialogFooter>
-                  <Button type="button" onClick={handleChooseAccesType}>
+                  <Button className="text-primary-green" type="button" onClick={handleChooseAccesType}>
                     Continue
                   </Button>
                 </DialogFooter>
@@ -223,9 +223,9 @@ const AccessWallet = () => {
             </Dialog>
 
             <Dialog open={openKeystore} onOpenChange={setOpenKeystore}>
-              <DialogContent>
+              <DialogContent className="bg-slate-950">
                 <DialogHeader>
-                  <DialogTitle>Access By Keystore File</DialogTitle>
+                  <DialogTitle className="text-primary-green">Access By Keystore File</DialogTitle>
                 </DialogHeader>
                 <div className="flex flex-col gap-5">
                   <Input
@@ -234,7 +234,7 @@ const AccessWallet = () => {
                     onChange={handleFileInputChange}
                   />
                   <div className="mb-5 flex flex-col gap-3">
-                    <h1 className="text-3xl text-center my-[30px] font-bold">
+                    <h1 className="text-3xl text-center my-[30px] font-bold text-primary-green">
                       Your password
                     </h1>
                     <Input
@@ -248,7 +248,7 @@ const AccessWallet = () => {
                   </div>
                 </div>
                 <DialogFooter>
-                  <Button type="button" onClick={handleAccessKeyStore}>
+                  <Button className="text-primary-green" type="button" onClick={handleAccessKeyStore}>
                     Access Wallet
                   </Button>
                 </DialogFooter>
@@ -256,13 +256,13 @@ const AccessWallet = () => {
             </Dialog>
 
             <Dialog open={openPrivateKey} onOpenChange={setOpenPrivateKey}>
-              <DialogContent>
+              <DialogContent className="bg-slate-950">
                 <DialogHeader>
-                  <DialogTitle>Access By Private Key</DialogTitle>
+                  <DialogTitle className="text-primary-green">Access By Private Key</DialogTitle>
                 </DialogHeader>
                 <div className="flex flex-col gap-5">
                   <div className="mb-5 flex flex-col gap-3">
-                    <h1 className="text-3xl text-center my-[30px] font-bold">
+                    <h1 className="text-3xl text-center my-[30px] font-bold text-primary-green">
                       Your private key
                     </h1>
                     <Input
@@ -276,17 +276,13 @@ const AccessWallet = () => {
                   </div>
                 </div>
                 <DialogFooter>
-                  <Button type="button" onClick={handleAccessPrivateKey}>
+                  <Button className="text-primary-green" type="button" onClick={handleAccessPrivateKey}>
                     Access Wallet
                   </Button>
                 </DialogFooter>
               </DialogContent>
             </Dialog>
           </div>
-          {/* <div className="mt-[50px] mb-[50px] flex flex-wrap justify-center items-center gap-1">
-            <p>Want to learn more about Blockchain or MEW? Please go to</p>
-            <p className="font-bold text-primary-green">FAQs</p>
-          </div> */}
         </div>
       </div>
     </div>

@@ -11,10 +11,10 @@ import { PiCallBellBold } from "react-icons/pi";
 
 const Home = () => {
   return (
-    <div className="bg-slate-100">
+    <div className="bg-slate-950">
       <section className="mx-auto max-w-screen-xl px-6 py-[75px] flex flex-wrap gap-5 justify-between">
         <div>
-          <h1 className="text-[50px] text-primary-black font-bold">
+          <h1 className="text-[50px] text-primary-green font-bold">
             Ehtereum Wallet
           </h1>
           <p className="mt-5 max-w-[550px] text-gray-400 text-justify text-lg">

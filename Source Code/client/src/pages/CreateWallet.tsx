@@ -83,7 +83,7 @@ const CreateWallet = () => {
   }, [isCreated]);
 
   return (
-    <div className="bg-primary-gray px-6 py-[100px]">
+    <div className="bg-slate-950 px-6 py-[100px]">
       {!isCreated ? (
         <form
           className="bg-white mx-auto md:w-[600px] lg:w-[800px] rounded-md"
@@ -92,11 +92,11 @@ const CreateWallet = () => {
           }}
         >
           <div className="bg-primary-black text-white p-6 rounded-t-md">
-            <h1 className="text-xl font-bold text-center">Create new wallet</h1>
+            <h1 className="text-xl font-bold text-center text-primary-green">Create new wallet</h1>
           </div>
-          <div className="px-4 md:px-[60px] py-6">
+          <div className="bg-gray-700 px-4 md:px-[60px] py-6">
             <div className="mb-5 flex flex-col gap-3">
-              <h1 className="text-3xl text-center my-[30px] font-bold">
+              <h1 className="text-3xl text-center my-[30px] font-bold text-primary-green">
                 Your password
               </h1>
               <Input
@@ -119,16 +119,12 @@ const CreateWallet = () => {
             <div className="my-10 flex flex-col items-center">
               <div className="flex flex-wrap justify-center items-center gap-1">
                 <p className="font-bold text-red-500">DO NOT FORGET</p>
-                <p>to save your password. You will need this</p>
+                <p className="text-primary-green">to save your password. You will need this</p>
               </div>
               <div className="flex flex-wrap justify-center items-center gap-1">
                 <p className="font-bold text-red-500">Pasword + Keystore</p>
-                <p>File to unclock your wallet</p>
+                <p className="text-primary-green">File to unclock your wallet</p>
               </div>
-            </div>
-            <div className="mb-[50px] flex flex-wrap justify-center items-center gap-1">
-              <p>Want to learn more about Blockchain or MEW? Please go to</p>
-              <p className="font-bold text-primary-green">FAQs</p>
             </div>
           </div>
         </form>
@@ -140,34 +136,34 @@ const CreateWallet = () => {
           }}
         >
           <div className="bg-primary-black text-white p-6 rounded-t-md">
-            <h1 className="text-xl font-bold text-center">
+            <h1 className="text-xl font-bold text-center text-primary-green">
               Save My Keystore File
             </h1>
           </div>
-          <div className="px-4 md:px-[60px] py-6">
+          <div className="bg-gray-700 px-4 md:px-[60px] py-6">
             <div className="mb-5 flex flex-col gap-3">
-              <div className="bg-primary-gray p-4 rounded-sm flex gap-3 items-center justify-between">
+              <div className="bg-gray-500 p-4 rounded-sm flex gap-3 items-center justify-between">
                 <AiOutlineSafety className="text-primary-green" size={80} />
                 <div className="w-[80%]">
-                  <h1 className="text-xl font-bold">Don't Lose it</h1>
-                  <p>Be carefull, it can not be recovered if you lose it.</p>
+                  <h1 className="text-xl font-bold text-primary-green">Don't Lose it</h1>
+                  <p className="text-amber-50">Be carefull, it can not be recovered if you lose it.</p>
                 </div>
               </div>
-              <div className="bg-primary-gray p-4 rounded-sm flex gap-3 items-center justify-between">
+              <div className="bg-gray-500 p-4 rounded-sm flex gap-3 items-center justify-between">
                 <BsIncognito className="text-primary-green" size={80} />
                 <div className="w-[80%]">
-                  <h1 className="text-xl font-bold">Don't Share it</h1>
-                  <p>
+                  <h1 className="text-xl font-bold text-primary-green">Don't Share it</h1>
+                  <p className="text-amber-50">
                     Your funds will be stolen if you use this file on a
                     malicious phishing site.
                   </p>
                 </div>
               </div>
-              <div className="bg-primary-gray p-4 rounded-sm flex gap-3 items-center justify-between">
+              <div className="bg-gray-500 p-4 rounded-sm flex gap-3 items-center justify-between">
                 <LuDatabaseBackup className="text-primary-green" size={80} />
                 <div className="w-[80%]">
-                  <h1 className="text-xl font-bold">Make a Backup</h1>
-                  <p>
+                  <h1 className="text-xl font-bold text-primary-green">Make a Backup</h1>
+                  <p className="text-amber-50">
                     Secure it like the millions of dollars it may one day be
                     worth.
                   </p>
@@ -184,10 +180,6 @@ const CreateWallet = () => {
               <p>{isGenerate ? "Please wait..." : "Download Keystore File"}</p>
               <div>{!isGenerate && <IoMdDownload size={25} />}</div>
             </button>
-            <div className="mt-[50px] mb-[50px] flex flex-wrap justify-center items-center gap-1">
-              <p>Want to learn more about Blockchain or MEW? Please go to</p>
-              <p className="font-bold text-primary-green">FAQs</p>
-            </div>
           </div>
         </form>
       )}
