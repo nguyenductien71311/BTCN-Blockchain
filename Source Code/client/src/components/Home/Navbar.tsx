@@ -6,7 +6,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between">
         <Link to="/">
           <div className="w-[120px]">
-            <img className="w-[100%]" src="./assets/logo-mew.png" alt="logo" />
+            <img className="w-[100%]" src="https://ethereum.by/static/da3e74023b0d48abaf82cda76e36939a/31987/ethereum-logo-landscape-purple.png" alt="logo" />
           </div>
         </Link>
         <div className="flex items-center gap-[30px]">

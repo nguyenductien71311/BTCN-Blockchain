@@ -26,22 +26,19 @@ class BlockChain {
     return this.chain.length - 1;
   }
 
-  // Thêm một validator mới vào danh sách validators
   addValidator(address: string, stake: any) {
     this.validators[address] = stake;
   }
 
-  // Chọn validator để xác thực block tiếp theo dựa trên số lượng stake
   chooseValidator(): string {
     const sumOfStakes: any = Object.values(this.validators).reduce(
       (sum: any, stake: any) => sum + stake,
       0
-    ); // Tổng số lượng stake của tất cả validators
+    );
 
-    const rand = Math.random() * sumOfStakes; // Chọn một giá trị ngẫu nhiên trong tổng stake
+    const rand = Math.random() * sumOfStakes;
     let cumulativeSum: any = 0;
 
-    // Lựa chọn validator dựa trên xác suất tỉ lệ với stake của họ
     for (const [address, stake] of Object.entries(this.validators)) {
       cumulativeSum += stake;
       if (rand < cumulativeSum) {
@@ -49,10 +46,9 @@ class BlockChain {
       }
     }
 
-    return ""; // Trường hợp không có validator nào được chọn
+    return "";
   }
 
-  // Thêm một block mới vào chuỗi
   addBlock(data: any): void {
     const newBlock = new Block(
       getCurrentTime(),

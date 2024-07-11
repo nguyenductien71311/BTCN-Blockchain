@@ -101,7 +101,7 @@ const History = () => {
         src="/assets/banner-history.png"
         alt="banner-2"
       />
-      <div className="w-[300px] sm:w-[500px] lg:w-full bg-white p-4 flex flex-col gap-5 rounded-md bg-slate-950">
+      <div className="w-[300px] sm:w-[500px] lg:w-full p-4 flex flex-col gap-5 rounded-md bg-slate-950">
         <div className="mx-auto my-5 flex items-center gap-5">
           <h1 className="text-3xl font-bold text-primary-green">
             Transactions

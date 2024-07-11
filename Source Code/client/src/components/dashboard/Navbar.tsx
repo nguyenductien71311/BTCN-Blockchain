@@ -81,7 +81,7 @@ const Navbar = () => {
     <div className="bg-black fixed z-10 w-full h-[60px] flex items-center justify-between p-4">
       <Link to="/dashboard">
         <div className="w-[120px]">
-          <img className="w-[100%]" src="../assets/logo-mew.png" alt="logo" />
+          <img className="w-[100%]" src="https://ethereum.by/static/da3e74023b0d48abaf82cda76e36939a/31987/ethereum-logo-landscape-purple.png" alt="logo" />
         </div>
       </Link>
       <div className="flex items-center gap-5">
